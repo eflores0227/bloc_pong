@@ -1,6 +1,41 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-    <head>Bloc Pong</head>
-    <body>Let's play</body>
+    <head>
+        <title>Bloc Pong</title>
+        <script defer src="scripts/pong.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles/pong.css" />
+    </head>
+    <body>
+        <canvas id="game" width="700" height="500"></canvas>
+        <script>
+            var canvas = document.getElementById('game');
+            var context = canvas.getContext('2d');
+            
+            context.beginPath();
+            context.rect(350, 0, 2, 500);
+            context.fillStyle = 'white';
+            context.fill();
+            
+            context.beginPath();
+            context.rect(10, 180, 10, 100);
+            context.fillStyle = 'white';
+            context.fill();
+            
+            context.beginPath();
+            context.rect(680, 180, 10, 100);
+            context.fillStyle = 'white';
+            context.fill();
+            
+            var centerX = canvas.width / 2;
+            var centerY = canvas.height / 2;
+            var radius = 5.5;
 
+            context.beginPath();
+            context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+            context.fillStyle = 'white';
+            context.fill();
+            context.stroke();
+            
+        </script>
+    </body>
 </html>
